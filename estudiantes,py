@@ -1,0 +1,33 @@
+estudiantes = []
+
+while True:
+    print("\n1. Agregar estudiante")
+    print("2. Mostrar estudiantes")
+    print("3. Buscar estudiante")
+    print("4. Salir")
+
+    opcion = input("Seleccione una opcion: ")
+
+    if opcion == "1":
+        nombre = input("Ingrese el nombre: ")
+        estudiantes.append(nombre)
+        print("Estudiante agregado.")
+
+    elif opcion == "2":
+        print("Lista de estudiantes:")
+        for estudiante in estudiantes:
+            print(estudiante)
+
+    elif opcion == "3":
+        nombre = input("Ingrese el nombre a buscar: ")
+        if nombre in estudiantes:
+            print("Estudiante encontrado.")
+        else:
+            print("Estudiante no encontrado.")
+
+    elif opcion == "4":
+        print("Programa finalizado.")
+        break
+
+    else:
+        print("Opcion no valida.")
